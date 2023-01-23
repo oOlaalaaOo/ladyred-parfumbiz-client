@@ -60,7 +60,9 @@ export const LinksGroup = ({
             <UnstyledButton
                 onClick={() => {
                     if (!hasLinks) {
-                        router.push(link);
+                        if (link) {
+                            router.push(link);
+                        }
                     } else {
                         setOpened((o) => !o);
                     }
